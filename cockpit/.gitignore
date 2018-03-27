@@ -6,6 +6,8 @@
 .settings
 .idea
 /storage/api.keys.php
+/storage/cache/*
+/storage/tmp/*
 /config/*
 /tests/*
 /node_modules
