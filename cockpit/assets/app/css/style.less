@@ -1,0 +1,199 @@
+/*
+ * Run `lessc style.less > style.css -x`
+ */
+
+@import (less) "../../lib/codemirror/lib/codemirror.css";
+@import (less) "../../lib/codemirror/addon/hint/show-hint.css";
+@import "less/uikit/uikit.less";
+
+@global-primary-background: #4FC1E9;
+//@global-primary-background: #A0CECB;
+//@global-primary-background: #eb5424;
+//@global-primary-background: #485b8a;
+@global-link-color: @global-primary-background;
+
+.uk-text-bolder {
+    font-weight: bolder;
+}
+
+.uk-noselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.uk-disabled {
+    pointer-events: none;
+}
+
+.uk-selected, tr.uk-selected > td {
+    background: @global-selected-background;
+}
+
+.uk-animation-fast {
+    -webkit-animation-duration: .35s;
+    animation-duration: .35s;
+}
+
+.app-header {
+    position: relative;
+    background-color: @global-background;
+    box-shadow: 0 0 20px rgba(0,0,0,0.07);
+    margin-bottom: 2.5rem;
+    z-index: 10;
+}
+
+.app-header-topbar {
+
+    //background-color: @global-primary-background;
+    border-bottom: 1px #eee solid;
+    padding: 15px 0;
+    box-sizing: border-box;
+    min-height: 60px;
+
+    a { text-decoration: none !important; }
+
+    .uk-contrast * {
+        color: @global-contrast-color;
+    }
+}
+
+.uk-svg-adjust path,
+.uk-svg-adjust rect,
+.uk-svg-adjust circle:not([fill="none"]),
+.uk-svg-adjust polygon,
+.uk-svg-adjust line {
+    fill: currentColor;
+}
+
+.uk-svg-adjust path[stroke],
+.uk-svg-adjust rect[stroke],
+.uk-svg-adjust circle[stroke],
+.uk-svg-adjust polygon[stroke],
+.uk-svg-adjust line[stroke] {
+    stroke: currentColor;
+}
+
+.app-panel-dropdown {
+    margin-top: 25px;
+    width: 600px;
+    max-width: 85vw;
+}
+
+.app-modulesbar > li > a {
+    padding: 0 4px;
+}
+
+.app-modulesbar a.uk-active {
+    color: @global-primary-background;
+}
+
+.app-main {
+    margin-top: @global-margin-large;
+}
+
+.app-footer {
+    margin: (2 * @global-margin-large) 0;
+}
+
+.material-ripple {
+    position: absolute;
+    pointer-events: none;
+    z-index: 100000;
+}
+.material-ink {
+    position: absolute;
+    background: rgba(0,0,0,.1);
+    border-radius: 50%;
+    transform: scale(0);
+}
+.material-ink.animate-ink {
+    animation: matrial-ripple .6s linear
+}
+@keyframes matrial-ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0
+    }
+}
+
+
+// vendor styles
+
+.mce-panel {
+    border: none !important;
+}
+
+.jsoneditor {
+    border-color: #ccc !important;
+    border-color: #ccc !important;
+}
+
+div.jsoneditor-tree {
+    background: @global-contrast-color !important;
+}
+
+.jsoneditor-menu {
+    background-color: @global-contrast-color !important;
+    border-color: #ccc !important;
+}
+
+.jsoneditor-menu input {
+    border: none !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+div.jsoneditor-menu>button,
+div.jsoneditor-menu>div.jsoneditor-modes>button {
+    color: #000 !important;
+}
+
+.CodeMirror span.cm-comment { color: #a86; }
+.CodeMirror span.cm-keyword { line-height: 1em; color: blue; }
+.CodeMirror span.cm-string { color: #a22; }
+.CodeMirror span.cm-builtin { line-height: 1em; color: #077; }
+.CodeMirror span.cm-special { line-height: 1em; color: #0aa; }
+.CodeMirror span.cm-variable { color: black; }
+.CodeMirror span.cm-number, .CodeMirror span.cm-atom { color: #3a3; }
+.CodeMirror span.cm-meta { color: #555; }
+.CodeMirror span.cm-link { color: #3a3; }
+
+.CodeMirror .CodeMirror-activeline-background { background: #e8f2ff; }
+.CodeMirror .CodeMirror-matchingbracket { outline:1px solid grey; color:black !important; }
+
+.CodeMirror-hints {
+  z-index: 1010;
+  margin: 0;
+
+  box-shadow: 2px 3px 5px rgba(0,0,0,.2);
+  border-radius: 3px;
+  border: 1px solid silver;
+
+  background: white;
+  font-size: 90%;
+  font-family: monospace;
+  max-height: 20em;
+  overflow-y: auto;
+}
+
+.CodeMirror-hint {
+  margin: 0;
+  padding: 0 4px;
+  border-radius: 2px;
+  white-space: pre;
+  color: black;
+  cursor: pointer;
+}
+
+li.CodeMirror-hint-active {
+  background: #08f;
+  color: white;
+}
+
+// spectrum color picker
+.sp-container, .sp-replacer  {
+    background: #fff !important;
+    border-color: #eee !important;
+}

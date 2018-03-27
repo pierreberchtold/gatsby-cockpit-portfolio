@@ -1,0 +1,154 @@
+//
+// Component: Form
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@form-height:                                   @global-height;
+@form-border:                                   @global-border;
+@form-background:                               none;
+@form-color:                                    @global-color;
+
+@form-padding:                                  4px 0;
+@form-small-padding:                            3px 0;
+@form-large-padding:                            8px 0;
+
+@form-focus-color:                              @global-color;
+@form-focus-background:                         @form-background;
+
+@form-disabled-background:                      none;
+@form-disabled-border:                          @global-border;
+@form-disabled-color:                           @global-muted-color;
+
+@form-placeholder-color:                        @global-muted-color;
+
+@form-gutter:                                   @global-margin;
+
+@form-legend-border:                            @global-border;
+@form-legend-font-size:                         round((@global-font-size * 1.28)); // 18px / 20px
+@form-legend-line-height:                       round((@form-legend-font-size * 1.68)); // 30px / 34px
+
+@form-small-height:                             @global-height-small;
+@form-large-height:                             @global-height-large;
+@form-small-font-size:                          round((@global-font-size * 0.85)); // 12px / 14px
+@form-large-font-size:                          round((@global-font-size * 1.14)); // 16px / 18px
+
+@form-blank-border:                             @global-border;
+
+@form-icon-font-size:                           @global-font-size;
+@form-icon-color:                               @global-muted-color;
+
+
+// Component
+// ========================================================================
+
+.hook-form() {
+    border-radius: none;
+    border: none;
+    border-bottom: @form-border-width solid @form-border;
+}
+
+// Focus state
+.hook-form-focus() {}
+
+// Disabled state
+.hook-form-disabled() {}
+
+// Legend
+.hook-form-legend() {}
+
+
+// Validation states
+// ========================================================================
+
+//
+// Error state
+//
+
+.hook-form-danger() {}
+
+//
+// Success state
+//
+
+.hook-form-success() {}
+
+
+// Style modifiers
+// ========================================================================
+
+.hook-form-blank() {
+    border: none !important;
+}
+
+.hook-form-blank-focus() {
+    border: none !important;
+}
+
+
+// Sub-object: `uk-form-label`
+// ========================================================================
+
+.hook-form-stacked-label() {}
+
+.hook-form-horizontal-label() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-form-misc() {
+
+    .uk-form-switch {
+        display: inline-block;
+        position: relative;
+        padding-right: 3.5em;
+        height: 1em;
+    }
+
+    .uk-form-switch input[type="checkbox"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -2;
+        border: none;
+        outline: none;
+    }
+
+    .uk-form-switch label {
+        width: 2.5em;
+        height: 1em;
+        border-radius: 1em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        padding: 4px;
+        margin-top: -2px;
+        box-shadow: 0 0 1em rgba(0,0,0,.1);
+        transition: background .2s ease-in-out;
+        cursor: pointer;
+    }
+
+    .uk-form-switch label:after {
+        content: '';
+        width: 1em;
+        height: 1em;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: all .1s linear;
+    }
+
+    .uk-form-switch input[type="checkbox"]:checked + label:after {
+        left : calc(100% - 4px);
+        background: green;
+        transform: translateX(-100%);
+    }
+}

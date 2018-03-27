@@ -1,0 +1,72 @@
+//
+// Component: Utility
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@utility-container-padding-horizontal:          @global-grid-gutter;
+@utility-container-large-padding-horizontal:    @global-grid-gutter-large;
+
+@utility-align-horizontal:                      @global-margin;
+@utility-align-vertical:                        @global-margin;
+
+@utility-margin:                                @global-margin;
+
+@utility-heading-large-small-font-size:         round((@global-font-size * 2.6)); // 36px / 42px
+@utility-heading-large-small-line-height:       round((@utility-heading-large-small-font-size * 1.154)); // 42px / 48px
+@utility-heading-large-font-size:               round((@global-font-size * 3.72)); // 52px / 60px
+@utility-heading-large-line-height:             round((@utility-heading-large-font-size * 1.23)); // 64px / 74px
+
+@utility-link-muted-color:                      @global-color;
+@utility-link-muted-hover-color:                @global-color;
+
+@utility-scrollable-box-border:                 @global-border;
+
+
+// Container
+// ========================================================================
+
+.hook-container() {}
+
+
+// Scrollable
+// ========================================================================
+
+.hook-scrollable-box() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-utility-misc() {
+
+    .uk-position-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .uk-viewport-height-1-2 {
+        min-height: 50vh;
+    }
+
+    .uk-viewport-height-1-3 {
+        min-height: 30vh;
+    }
+
+    .uk-bg-dark { background: @global-dark-background !important; }
+    .uk-bg-light { background: @global-light-background !important; }
+    .uk-bg-primary { background: @global-primary-background !important; }
+    .uk-bg-success { background: @global-success-background !important; }
+    .uk-bg-danger { background: @global-danger-background !important;}
+
+
+    svg.inherit-color * {
+        fill: currentColor;
+    }
+
+}
