@@ -5,8 +5,7 @@
 .project
 .settings
 .idea
-/storage/*.*
-/storage/*/*
+/storage/api.keys.php
 /config/*
 /tests/*
 /node_modules
