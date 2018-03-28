@@ -199,7 +199,7 @@ h2 {
   color: var(--black);
   max-width: 960px;
   padding: 0px 0px 70px;
-  margin: 0px auto;
+  margin: 50px auto;
 }
 
 .project__header {

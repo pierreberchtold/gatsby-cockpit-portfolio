@@ -16,7 +16,7 @@ const IndexPage = ({data}) => {
         {projects.edges.map(({ node }, index) => (
           <li key={node.slug}  className={`project-item project-${index%3 + 1}`}>
             <Link to={`project/${node.slug}`} className="project-item__inner">
-              <Img sizes={node.preview.childImageSharp.sizes} className="project-item__image" />
+              <Img sizes={node.preview.localFile.childImageSharp.sizes} className="project-item__image" />
               <h3 className="project-item__title">{node.title}</h3>
             </Link>
           </li>
@@ -47,9 +47,11 @@ export const query = graphql`
           slug
           title
           preview {
-            childImageSharp {
-              sizes(maxWidth: 900, quality: 90) {
-                ...GatsbyImageSharpSizes
+            localFile {
+              childImageSharp {
+                sizes(maxWidth: 900, quality: 90) {
+                  ...GatsbyImageSharpSizes
+                }
               }
             }
           }

@@ -7,7 +7,7 @@ const ProjectTemplate = ({data}) => {
   return (
     <div>      
       <div className="project">
-        <Img sizes={project.preview.childImageSharp.sizes} className="project__header" />
+        <Img sizes={project.preview.localFile.childImageSharp.sizes} className="project__header" />
         <h1>{project.title}</h1>
         <div
           dangerouslySetInnerHTML={{
@@ -36,9 +36,11 @@ export const query = graphql`
       title
       content
       preview {
-        childImageSharp {
-          sizes(maxWidth: 900, quality: 90) {
-            ...GatsbyImageSharpSizes
+        localFile {
+          childImageSharp {
+            sizes(maxWidth: 900, quality: 90) {
+              ...GatsbyImageSharpSizes
+            }
           }
         }
       }      

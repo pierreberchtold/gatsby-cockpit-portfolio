@@ -17,8 +17,8 @@ module.exports = {
       resolve: `gatsby-plugin-cockpit`,
       options: {
         cockpitConfig: {
-          baseURL: 'http://cockpit-portfolio-v1.local', // the url to you cockpit installation
-          accessToken: '7c3b357b46d0e1f51a822d50265e06', // you cockpit API key
+          baseURL: 'http://cockpit.portfolio.local', // the url to you cockpit installation
+          accessToken: '6253b3ebb626ba3900d124422e6916', // you cockpit API key
         },
       },
     },
