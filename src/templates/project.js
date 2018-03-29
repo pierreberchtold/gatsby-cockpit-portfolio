@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
+import Card from '../components/Card';
 
 const ProjectTemplate = ({data}) => {
-  const { project } = data
+  const { project } = data;
   return (
     <div>      
       <div className="project">
@@ -15,17 +16,9 @@ const ProjectTemplate = ({data}) => {
           }}
         />    
       </div>
-      <div className="card">
-        <p>We love to do stuff that make people happy.</p>
-        <Link to="/" className="button">
-          Home
-        </Link>
-        <Link to="/about" className="button">
-          More about us
-        </Link>
-      </div>  
+      <Card paragraph="We love to do stuff that make people happy." btnUrl="Home" btnText="More about us" />
     </div>
-  )
+  );
 }
 
 export default ProjectTemplate;

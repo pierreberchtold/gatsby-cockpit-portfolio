@@ -72,7 +72,7 @@ h6 a {
 
 .logo {
   font-size: 32px;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
   margin-top: 0px;
 }
 
@@ -216,6 +216,11 @@ h2 {
 .project h1:first-child {
   padding-top: 70px;
   margin-top: 0px;
+}
+
+.project p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0px;
 }
 
 

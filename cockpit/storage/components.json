@@ -1,0 +1,66 @@
+{
+    "ProjectGrid": {
+        "label": "Project Grid",
+        "fields": [
+            {
+                "name": "nbProjects",
+                "label": "",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "Custom Component"
+    },
+    "Card": {
+        "label": "Card",
+        "fields": [
+            {
+                "name": "paragraph",
+                "label": "Paragraph",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            },
+            {
+                "name": "btnText",
+                "label": "Button Text",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            },
+            {
+                "name": "btnUrl",
+                "label": "Button URL",
+                "type": "text",
+                "default": "",
+                "info": "",
+                "group": "",
+                "localize": false,
+                "options": [],
+                "width": "1-1",
+                "lst": true,
+                "acl": []
+            }
+        ],
+        "group": "custom"
+    }
+}

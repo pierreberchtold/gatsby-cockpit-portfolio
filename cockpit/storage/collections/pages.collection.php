@@ -45,7 +45,7 @@
     array (
       'name' => 'content',
       'label' => '',
-      'type' => 'wysiwyg',
+      'type' => 'layout',
       'default' => '',
       'info' => '',
       'group' => '',
@@ -63,7 +63,7 @@
   'sortable' => true,
   'in_menu' => false,
   '_created' => 1521555943,
-  '_modified' => 1521556179,
+  '_modified' => 1522318712,
   'color' => '',
   'acl' => 
   array (
